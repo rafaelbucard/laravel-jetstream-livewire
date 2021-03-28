@@ -7,7 +7,7 @@
             <div class="bg-white shadow-md rounded-lg px-3 py-2 mb-4">
                 <div class=" block text-right text-gray-700 text-lg font-semibold py-2 px-2">
                     Lista dos contatos 
-                    <button class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    <button class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-20">
                         Novo Registro
                     </button>
                 </div>
@@ -54,7 +54,11 @@
                         <div class="text-sm font-normal text-gray-500 tracking-wide">Member</div>
                     </div>
                 </div>
-                <div class="block bg-gray-200 text-sm text-right py-2 px-3 -mx-3 -mb-2 rounded-b-lg"> </div>
+                <div class="block bg-gray-200 text-sm text-right py-2 px-3 -mx-3 -mb-2 rounded-b-lg">
+                    {{$name}}
+                    <input type="text" wire:model="name">
+                
+                </div>
             </div>
         </div>
     </div>
