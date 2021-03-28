@@ -22,8 +22,10 @@
                         </svg>
                     </div>
                     <input
+                    
                         class="w-full rounded-md bg-gray-200 text-gray-700 leading-tight focus:outline-none py-2 px-2"
-                        id="search" type="text" placeholder="Procure por nome">
+                        wire:model="search" type="text" placeholder="Procure por nome">
+                     
                 </div>
                 @foreach ($infos as $info)
                 <div class="py-3 text-sm">
@@ -40,7 +42,7 @@
                           
                     </div>
                 @endforeach    
-                    
+                   <div>{{$infos->links()}}</div> 
                
             </div>
         </div>
