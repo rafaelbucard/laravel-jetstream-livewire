@@ -27,6 +27,23 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('info')->insert([
+            'nome'=> "Fabio",
+            'cidade'=> 'Niterói',
+            'bairro'=> 'Santa Rosa',
+            'endereco'=> 'Rua do Canal 52',
+            'cep'=> '21044870',
+            'nascimento'=> date('Y-m-d')
+        ]);
+        DB::table('info')->insert([
+            'nome'=> "Sabrina",
+            'cidade'=> 'Niterói',
+            'bairro'=> 'Santa Rosa',
+            'endereco'=> 'Rua do Canal 52',
+            'cep'=> '21044870',
+            'nascimento'=> date('Y-m-d')
+        ]);
+
+        DB::table('info')->insert([
             'nome'=> "Danielle",
             'cidade'=> 'Niterói',
             'bairro'=> 'Santa Rosa',
@@ -51,6 +68,31 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('contatos')->insert([
             'id_info'=> 4,
+            'tipo'=> "E-mail",
+            'contato'=> 'user@dominio.com.br',
+        ]);
+        DB::table('contatos')->insert([
+            'id_info'=> 5,
+            'tipo'=> "E-mail",
+            'contato'=> 'user@dominio.com.br',
+        ]);
+        DB::table('contatos')->insert([
+            'id_info'=> 6,
+            'tipo'=> "E-mail",
+            'contato'=> 'user@dominio.com.br',
+        ]);
+        DB::table('contatos')->insert([
+            'id_info'=> 7,
+            'tipo'=> "E-mail",
+            'contato'=> 'user@dominio.com.br',
+        ]);
+        DB::table('contatos')->insert([
+            'id_info'=> 1,
+            'tipo'=> "E-mail",
+            'contato'=> 'user@dominio.com.br',
+        ]);
+        DB::table('contatos')->insert([
+            'id_info'=> 2,
             'tipo'=> "E-mail",
             'contato'=> 'user@dominio.com.br',
         ]);
