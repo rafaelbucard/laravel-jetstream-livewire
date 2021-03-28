@@ -5,10 +5,12 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Info;
 use App\Models\Contato;
+use Livewire\WithPagination;
 
 
 class ItemList extends Component
 {
+    use WithPagination;
     public $search;
     
     public function render()
