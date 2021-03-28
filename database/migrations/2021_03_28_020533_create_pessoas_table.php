@@ -19,7 +19,7 @@ class CreatePessoasTable extends Migration
             $table->string('nome');
             $table->string('cidade');
             $table->string('bairro');
-            $table->string('endereço');
+            $table->string('endereco');
             $table->string('cep');
             $table->date('nascimento');
 

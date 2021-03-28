@@ -3,6 +3,9 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use App\Models\Info;
+use App\Models\Contato;
+
 
 class ItemList extends Component
 {
@@ -10,6 +13,9 @@ class ItemList extends Component
     
     public function render()
     {
-        return view('livewire.item-list');
+        return view('livewire.item-list',[
+            'infos' => Info::all(),
+            'contatos' => Contato::all()
+        ]);
     }
 }

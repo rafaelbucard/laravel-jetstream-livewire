@@ -25,42 +25,23 @@
                         class="w-full rounded-md bg-gray-200 text-gray-700 leading-tight focus:outline-none py-2 px-2"
                         id="search" type="text" placeholder="Procure por nome">
                 </div>
+                @foreach ($infos as $info)
                 <div class="py-3 text-sm">
                     <div class="flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2">
-                        <span class="bg-gray-400 h-2 w-2 m-2 rounded-full"></span>
-                        <div class="flex-grow font-medium px-2">Tighten Co.</div>
-                        <div class="text-sm font-normal text-gray-500 tracking-wide">Team</div>
-                        <div class="text-sm font-normal text-gray-500 tracking-wide">Team</div>
-                        <div class="text-sm font-normal text-gray-500 tracking-wide">Team</div>
-                        <div class="text-sm font-normal text-gray-500 tracking-wide">Member</div>
+                       
+                        <div class="flex-grow font-medium px-2"><b>{{$info->nome}}</b>-</div>
+                        <div class="text-sm font-normal text-gray-500 tracking-wide">
+                            @foreach ($contatos as $contato)
+                                @if ($info->id == $contato->id_info)
+                                    <b>{{$contato->tipo}}</b>: {{$contato->contato}} &nbsp; &nbsp;
+                                @endif
+                            @endforeach 
+                        </div>
+                          
                     </div>
+                @endforeach    
                     
-                    <div class="flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2">
-                        <span class="bg-green-400 h-2 w-2 m-2 rounded-full"></span>
-                        <div class="flex-grow font-medium px-2">Taylor Otwell</div>
-                        <div class="text-sm font-normal text-gray-500 tracking-wide">Member</div>
-                    </div>
-                    <div class="flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2">
-                        <span class="bg-gray-400 h-2 w-2 m-2 rounded-full"></span>
-                        <div class="flex-grow font-medium px-2">Adam Wathan</div>
-                        <div class="text-sm font-normal text-gray-500 tracking-wide">Member</div>
-                    </div>
-                    <div class="flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2">
-                        <span class="bg-gray-400 h-2 w-2 m-2 rounded-full"></span>
-                        <div class="flex-grow font-medium px-2">Duke Street Studio Inc.</div>
-                        <div class="text-sm font-normal text-gray-500 tracking-wide">Team</div>
-                    </div>
-                    <div class="flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2">
-                        <span class="bg-green-400 h-2 w-2 m-2 rounded-full"></span>
-                        <div class="flex-grow font-medium px-2">Jeffrey Wey</div>
-                        <div class="text-sm font-normal text-gray-500 tracking-wide">Member</div>
-                    </div>
-                </div>
-                <div class="block bg-gray-200 text-sm text-right py-2 px-3 -mx-3 -mb-2 rounded-b-lg">
-                    {{$name}}
-                    <input type="text" wire:model="name">
-                
-                </div>
+               
             </div>
         </div>
     </div>
