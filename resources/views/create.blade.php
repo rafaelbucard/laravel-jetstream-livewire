@@ -18,7 +18,7 @@
        
     </x-slot>
 
-   @livewire('item-list')
+   @livewire('contact-create')
    
 
     

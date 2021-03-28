@@ -7,9 +7,11 @@
             <div class="bg-white shadow-md rounded-lg px-3 py-2 mb-4">
                 <div class=" block text-right text-gray-700 text-lg font-semibold py-2 px-2">
                     Lista dos contatos 
-                    <button class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-20">
-                        Novo Registro
-                    </button>
+                    <a href="{{ route('create') }}">
+                        <button class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-20">
+                            Novo Registro
+                        </button>
+                    </a>    
                 </div>
                 <div class="flex items-center bg-gray-200 rounded-md">
                     <div class="pl-2">
