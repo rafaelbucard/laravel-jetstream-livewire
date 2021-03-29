@@ -19,7 +19,7 @@
                     <input type="text" wire:model="nome" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Nome">
                     <div class="text-red-600">
                         @error('nome')
-                        {{massage}}
+                        {{$message}}
                         @enderror
                     </div>
                   </div>
@@ -28,7 +28,7 @@
                     <input type="text" wire:model="cidade"class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Cidade">
                     <div class="text-red-600">
                       @error('cidade')
-                      {{massage}}
+                      {{$message}}
                       @enderror
                   </div>
                   </div>
@@ -36,8 +36,8 @@
                     <label class="leading-loose">Bairro</label>
                     <input type="text"  wire:model="bairro"class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Bairro">
                     <div class="text-red-600">
-                      @error('cidade')
-                      {{massage}}
+                      @error('bairro')
+                      {{$message}}
                       @enderror
                   </div>
                   </div>
@@ -46,7 +46,7 @@
                     <input type="text"  wire:model="endereco" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="EX: Rua das Flores, 23 Ap 230">
                     <div class="text-red-600">
                       @error('endereco')
-                      {{massage}}
+                      {{$message}}
                       @enderror
                   </div>
                   </div>
@@ -62,7 +62,7 @@
                       </div>
                       <div class="text-red-600">
                         @error('nascimento')
-                        {{massage}}
+                        {{$message}}
                         @enderror
                     </div>
                     </div>
@@ -71,35 +71,24 @@
                       <input type="text"  wire:model="cep" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Cep">
                       <div class="text-red-600">
                         @error('cep')
-                        {{massage}}
+                        {{$message}}
                         @enderror
                     </div>
                     </div>
                    
                   </div>
-                  <div class="flex flex-col">
-                    <label class="leading-loose"> Tipo de Contato</label>
-                    <select class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600">
-                      <option value="Facebook">Facebook</option>
-                      <option value="E-mail">E-mail</option>
-                      <option value="Telefone">Telefone</option>
-                    </select>
-                  </div>
-                  <div class="flex flex-col">
-                    <label class="leading-loose">Contato</label>
-                    <input type="text" class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="Contato">
-                  </div>
                 </div>
                 <div class="pt-4 flex items-center space-x-4">
-                   <a href="{{ route('dashboard') }}"> 
-                        <button class="flex justify-center items-center w-full text-gray-900 px-4 py-3 rounded-md focus:outline-none">
-                        <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> Cancelar
-                        </button>
-                   </a>    
+                   
                     <button  type="submit" class="bg-blue-500 flex justify-center items-center w-full text-white px-4 py-3 rounded-md focus:outline-none">Criar</button>
                 </div>
               </div>
               </form>
+              <a href="{{ route('dashboard') }}"> 
+                <button class="flex justify-center items-center w-full text-gray-900 px-4 py-3 rounded-md focus:outline-none">
+                <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> Cancelar
+                </button>
+              </a>    
             </div>
           </div>
         </div>

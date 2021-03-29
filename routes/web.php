@@ -25,3 +25,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/create', function () {
     return view('create');
 })->name('create');
 
+Route::middleware(['auth:sanctum', 'verified'])->get('/form', function () {
+    return view('form');
+})->name('form');
+
