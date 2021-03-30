@@ -43,7 +43,6 @@ class ContactForm extends Component
             'id_info'=>  $this->userid->id,
             'tipo'=> $this->tipo,
             'contato'=> $this->contato
-           
         ]);
 
       
