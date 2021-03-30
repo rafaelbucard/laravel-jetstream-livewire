@@ -22,25 +22,26 @@
                         </svg>
                     </div>
                     <input
-                    
                         class="w-full rounded-md bg-gray-200 text-gray-700 leading-tight focus:outline-none py-2 px-2"
-                        wire:model="search" type="text" placeholder="Procure por nome">
-                     
+                        wire:model="search" type="text" placeholder="Procure por nome"> 
                 </div>
                 @foreach ($infos as $info)
-                
                 <div class=" py-3 text-sm">
+                    <form wire:submit.prevent="deleteregistro({{$info->id}})"  method="POST">
+                        <div class="pt-4 flex items-center space-x-4">
+                          <button  type="submit" class="bg-red-500 flex justify-center items-center  text-white px-4 py-3 rounded-md focus:outline-none">Deletar Registro Abaixo</button> </a>
+                        </div>
+                      </form>
                     <div class="flex-colum justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2">
-                       
-                        <div class="flex-grow font-medium px-2"><b>{{$info->nome}}</b>-</div>
+                        <div class="flex-grow font-medium px-2"><b>{{$info->nome}}</b>-
+                        </div>
                         <div class="  text-sm font-normal text-gray-500 tracking-wide">
                             @foreach ($contatos as $contato)
                                 @if ($info->id == $contato->id_info)
-                                    <b>{{$contato->tipo}}</b>: {{$contato->contato}} &nbsp; &nbsp;
+                                    <b>{{$contato->tipo}}</b>: {{$contato->contato}} &nbsp; &nbsp;  
                                 @endif
                             @endforeach 
-                        </div>
-                          
+                        </div>  
                     </div>
                 @endforeach        
             </div>

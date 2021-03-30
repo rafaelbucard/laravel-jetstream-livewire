@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Info extends Model
 {
+   
     protected $fillable = [
         'nome',
             'cidade',
@@ -19,4 +20,6 @@ class Info extends Model
 
     public $timestamps = false;
     public $table = 'info';
+
+   
 }

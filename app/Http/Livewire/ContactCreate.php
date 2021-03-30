@@ -28,9 +28,8 @@ class ContactCreate extends Component
     public function create()
     {
     
-     
        $this->validate();
-
+       
         Info::create([
             'nome'=>  $this->nome,
             'cidade'=> $this->cidade,
@@ -43,6 +42,8 @@ class ContactCreate extends Component
         return redirect('form');
 
     }
+
+  
 
     public function render()
     {

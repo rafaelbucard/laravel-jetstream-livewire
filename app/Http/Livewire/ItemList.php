@@ -11,7 +11,9 @@ use Livewire\WithPagination;
 class ItemList extends Component
 {
     use WithPagination;
+    
     public $search;
+
     
     public function render()
     {
@@ -23,8 +25,17 @@ class ItemList extends Component
         } else{
         return view('livewire.item-list',[
             'infos' => Info::orderBy('nome')->paginate(10),
-            'contatos' => Contato::all()
+            'contatos' => Contato::all(),
+            'lastid'=> Info::orderBy('id', 'desc')->first()
         ]);
     }
+    }
+
+    public function deleteregistro($id) {
+
+        Contato::where('id_info',$id)->delete();
+        Info::find($id)->delete();
+
+//return redirect('dashboard');
     }
 }

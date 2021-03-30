@@ -5,7 +5,6 @@
           <div class="relative px-4 py-10 bg-white mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
             <div class="max-w-md mx-auto">
               <div class="flex items-center space-x-5">
-                
                 <div class="block pl-2 font-semibold text-xl self-start text-gray-700">
                   <h2 class="leading-relaxed">Registrar Contato</h2>
                   <p class="text-sm text-gray-500 font-normal leading-relaxed">Informaçoes Pessoais.</p>
@@ -50,7 +49,6 @@
                       @enderror
                   </div>
                   </div>
-                  
                   <div class="flex items-center space-x-4">
                     <div class="flex flex-col">
                       <label class="leading-loose">Nascimento</label>
@@ -75,11 +73,9 @@
                         @enderror
                     </div>
                     </div>
-                   
                   </div>
                 </div>
                 <div class="pt-4 flex items-center space-x-4">
-                   
                     <button  type="submit" class="bg-blue-500 flex justify-center items-center w-full text-white px-4 py-3 rounded-md focus:outline-none">Criar</button>
                 </div>
               </div>
