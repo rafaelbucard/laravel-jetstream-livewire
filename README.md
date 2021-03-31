@@ -40,8 +40,7 @@
  
  
  
- 
- Autor: Rafael Buçard 
+Feiro Com ♥️ por Rafael Buçard
 
 
 
